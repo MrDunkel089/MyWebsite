@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Mr_Dunkel Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-emoji="🏠"><span>Home</span></a></li>
+                <li><a href="about_me.html" data-emoji="🙋‍♂️"><span>About Me</span></a></li>
+                <li><a href="projects.html " data-emoji="💼"><span>Projects</span></a></li>
+                <li><a href="contact.html" data-emoji="📬"><span>Contact</span></a></li>
+                <li><a href="settings.html" data-emoji="⚙️"><span>Settings</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>🏠
+        <section class="welcome">
+            <h1>Welcome to My Website</h1>
+            <p><a>Just a basic website where you can read things about me :D</a></p>
+            <!-- Button Section -->
+            <div>
+                <a class="btn" href="about_me.html">Learn More About Me</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="popup-background" id="popupBackground">
+        <!-- Cookie Consent Popup -->
+        <div class="cookie-popup" id="cookiePopup">
+            <p>We Use Cookies</p>
+            <small>We use cookies to improve the user experience.</small>
+            <div class="expanded-info" id="expandedInfo">
+                We only use cookies to save your main color.
+            </div>
+            <div class="buttons">
+                <button class="accept" onclick="acceptCookies()">Accept</button>
+                <button class="info" onclick="showInfo()">Info</button>
+                <button class="deny" onclick="denyCookies()">Deny</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mr_Dunkel's Website | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
