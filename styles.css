@@ -4,6 +4,8 @@
     --text-color: #fff;
 }
 
+
+
 /* General styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,6 +15,8 @@ body {
     color: #333;
     background-color: #f8f9fa;
 }
+
+
 
 /* Header and Navigation Styles */
 header {
@@ -36,6 +40,7 @@ nav ul li {
     padding: 25px;
     display: inline;
     transition: transform 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
+    justify-content: space-around;
 }
 
 nav ul li:hover {
@@ -58,6 +63,49 @@ nav ul li a {
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
+
+    /*fix responsive desinge*/
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+
+
+/* Display emoji before text for large screens */
+nav ul li a::before {
+    content: attr(data-emoji);
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    /* Display emoji after text for small screens */
+    nav ul li a::before {
+        content: none;
+    }
+
+    nav ul li a::after {
+        content: attr(data-emoji);
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    nav ul li a span {
+        display: none;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 20px;
+    }
 }
 
 nav ul li a:hover {
@@ -71,6 +119,8 @@ nav ul li a:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     transform: scale(0.9); /* Slightly shrink the button on click */
 }
+
+
 
 /* Main Content Styles */
 main {
@@ -95,13 +145,7 @@ main section p {
     transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-/* Button Container for Vertical Layout */
-.button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
+
 
 /* Footer Styles */
 footer {
@@ -113,11 +157,15 @@ footer {
     width: 100%;
 }
 
+
+
 /* Color Picker */
 .color-picker-container {
     align-items: center;
     gap: 10px;
 }
+
+
 
 /* Button Styles for Call-to-Action */
 .btn {
@@ -145,6 +193,8 @@ footer {
     transform: scale(1.05); /* Slightly shrink the button on click */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+
+
 
 /* Popup Styles */
 .popup-background {
@@ -235,5 +285,4 @@ footer {
     font-size: 12px;
 }
 
-/*background from the cookie pop up*/
-
+/*background from the cookie pop up WIP*/

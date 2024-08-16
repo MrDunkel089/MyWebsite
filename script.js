@@ -80,12 +80,14 @@
             setCookie('cookiesAccepted', 'true', 365);
             applySavedColors();
             hidePopup();
+            alert("Cookies Accepted");
         }
 
         // Function to handle cookie denial
         function denyCookies() {
             // No cookies will be set, so we don't save anything
             hidePopup();
+            alert("Cookies denyed");
         }
 
         // Function to show the info message in the popup
@@ -107,3 +109,5 @@
             // Show the cookie consent popup again
             showPopup();
         }
+
+        //Resize for small windows/Phone
